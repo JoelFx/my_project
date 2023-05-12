@@ -1,19 +1,88 @@
+<!-- This code is for an Ionic app and is divided into three parts: -->
+<!-- The first part is the header, which contains the title of the app. -->
 <ion-header [translucent]="true">
-  <ion-toolbar>
+  <ion-toolbar color="warning">
     <ion-title>
-      Blank
+      Football Zone
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
+<!-- The second part is the content, which contains the main elements of the app. -->
+<ion-content [fullscreen]="true" class="ion-padding">
+  <!-- The condensed header is used when the content is scrolled. -->
   <ion-header collapse="condense">
     <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
+      <ion-title size="large">Football Zone</ion-title>
     </ion-toolbar>
   </ion-header>
 
-  <div id="container">
- <h3>Welcome to Mobile Apps Starter project 2023</h3>
+  <!-- The container div contains the introductory text and categories. -->
+  <div class="container">
+    <h1>Welcome to <span style="color: yellow;">Football Zone</span>!</h1>
+    <p>Get the latest football news, scores, highlights, and analysis on Football Zone. Stay up-to-date with your favorite teams and players, and join the conversation with fans from around the world.</p>
+    <h4 style="color: red;">Check out our categories below to get started:</h4>
+    <!-- The unordered list contains the category buttons. -->
+    <ul>
+      <li><ion-button (click)="sendToScores()" expand="full" color="warning">Live Scores</ion-button></li>
+      <li><ion-button (click)="sendToNews()" expand="full" color="warning">News</ion-button></li>
+      <li><ion-button (click)="sendToDiscussion()" expand="full" color="danger">Discussion</ion-button></li>
+    </ul>
   </div>
 </ion-content>
+
+<!-- The third part is the CSS styles that define the appearance of the elements. -->
+<style>
+  .container {
+    margin: 20px;
+    text-align: center;
+  }
+  
+  h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+  }
+  p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+  }
+  
+  h4 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+  }
+  
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  li {
+    margin: 10px;
+  }
+  
+  a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.2rem;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.2s ease-in-out;
+  }
+  
+  .category-button {
+    display: block;
+    width: 200px;
+    height: 50px;
+    line-height: 50px;
+  }
+  
+  a:hover {
+    background-color: #c8a415; /* Yellow hover color */
+  }
+</style>
+<!-- The end of the code -->

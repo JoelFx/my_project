@@ -1,0 +1,92 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Live Scores</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Live Scores</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  
+  <div class="container">
+    <h2>Live Scores</h2>
+    <div class="scores">
+      <div class="score">
+        <div class="team-name">Manchester United</div>
+        <div class="score-info">1</div>
+      </div>
+      <div class="score">
+        <div class="team-name">Manchester City</div>
+        <div class="score-info">0</div>
+      </div>
+    </div>
+    <div class="scores">
+      <div class="score">
+        <div class="team-name">Liverpool</div>
+        <div class="score-info">0</div>
+      </div>
+      <div class="score">
+        <div class="team-name">Chelsea</div>
+        <div class="score-info">1</div>
+      </div>
+    </div>
+    <div class="scores">
+      <div class="score">
+        <div class="team-name">Arsenal</div>
+        <div class="score-info">2</div>
+      </div>
+      <div class="score">
+        <div class="team-name">Tottenham</div>
+        <div class="score-info">2</div>
+      </div>
+    </div>
+  </div>
+  
+  <style>
+    .container {
+      margin: 20px;
+      text-align: center;
+    }
+    
+    h2 {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+    }
+    
+    .scores {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 10px;
+    }
+    
+    .score {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 250px;
+      height: 100px;
+      margin: 0 10px;
+      background-color: #fff;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+      border-radius: 5px;
+      font-size: 2rem;
+    }
+    
+    .team-name {
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+    
+    .score-info {
+      margin-left: 10px;
+      font-size: 3rem;
+      font-weight: bold;
+    }
+  </style>
+</ion-content>

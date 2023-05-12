@@ -8,9 +8,30 @@ const routes: Routes = [
   },
   {
     path: '',
-    redirectTo: 'home',
+    redirectTo: 'login',
     pathMatch: 'full'
   },
+  {
+    path: 'login',
+    loadChildren: () => import('./login/login.module').then( m => m.LoginPageModule)
+  },  {
+    path: 'news',
+    loadChildren: () => import('./news/news.module').then( m => m.NewsPageModule)
+  },
+  {
+    path: 'live',
+    loadChildren: () => import('./live/live.module').then( m => m.LivePageModule)
+  },
+  {
+    path: 'discussion',
+    loadChildren: () => import('./discussion/discussion.module').then( m => m.DiscussionPageModule)
+  },
+  {
+    path: 'test',
+    loadChildren: () => import('./test/test.module').then( m => m.TestPageModule)
+  },
+
+
 ];
 
 @NgModule({

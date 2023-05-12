@@ -1,0 +1,96 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Discussion</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-buttons slot="start">
+        <ion-back-button></ion-back-button>
+      </ion-buttons>
+      <ion-title size="large">Discussion</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <div class="container">
+    <h1>Welcome to <span style="color: #3f51b5;">Football Zone</span> Discussion!</h1>
+    <p>Join the conversation with fans from around the world and share your thoughts on the latest football news and matches.</p>
+    <h4 style="color: #3f51b5;">Start a new discussion:</h4>
+    <form>
+      <ion-item>
+        <ion-label position="floating">Discussion Title</ion-label>
+        <ion-input type="text" required></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Discussion Content</ion-label>
+        <ion-textarea rows="5" required></ion-textarea>
+      </ion-item>
+      <ion-button expand="block" color="primary" type="submit">Start Discussion</ion-button>
+    </form>
+    <h4 style="color: #3f51b5;">Browse existing discussions:</h4>
+    <ul>
+      <li><a href="#">Discussion 1</a></li>
+      <li><a href="#">Discussion 2</a></li>
+      <li><a href="#">Discussion 3</a></li>
+    </ul>
+  </div>
+  
+  <ion-footer>
+    <ion-toolbar>
+      <ion-button expand="block" color="primary" routerLink="/home">Go Back to Home</ion-button>
+    </ion-toolbar>
+  </ion-footer>
+</ion-content>
+
+<style>
+  .container {
+    margin: 20px;
+    text-align: center;
+  }
+
+  h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+  }
+  
+  p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+  }
+  
+  h4 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+  }
+  
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  li {
+    margin: 10px;
+  }
+  
+  a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.2rem;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.2s ease-in-out;
+  }
+  
+  a:hover {
+    background-color: #303f9f;
+  }
+</style>
